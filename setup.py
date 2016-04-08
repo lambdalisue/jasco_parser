@@ -3,7 +3,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = 'jasco_parser'
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 
 
 def read(filename):
@@ -31,11 +31,10 @@ if sys.version_info >= (3, 0):
 setup(
     name=NAME,
     version=VERSION,
-    description=('A enhanced permission system which enable logical permission'
-                 'systems to complex permissions'),
-    long_description = read('README.rst'),
-    classifiers = (
-        'Development Status :: 5 - Production/Stable',
+    description='A JASCO data text file parser',
+    long_description=read('README.rst'),
+    classifiers=(
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
@@ -51,20 +50,20 @@ setup(
         'Topic :: Software Development :: Libraries :: Application Frameworks',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ),
-    keywords = 'text parser JASCO',
-    author = 'Alisue',
-    author_email = 'lambdalisue@hashnote.net',
-    url = 'https://github.com/lambdalisue/%s' % NAME,
-    download_url = 'https://github.com/lambdalisue/%s/tarball/master' % NAME,
-    license = 'MIT',
-    packages = find_packages('src'),
-    package_dir = {'': 'src'},
-    include_package_data = True,
-    package_data = {
-        '': ['README.rst',
-             'requirements.txt',
-             'requirements-test.txt',
-        ],
+    keywords='text parser JASCO',
+    author='Alisue',
+    author_email='lambdalisue@hashnote.net',
+    url='https://github.com/lambdalisue/%s' % NAME,
+    download_url='https://github.com/lambdalisue/%s/tarball/master' % NAME,
+    license='MIT',
+    packages=find_packages(),
+    include_package_data=True,
+    package_data={
+        '': (
+            'README.rst',
+            'requirements.txt',
+            'requirements-test.txt',
+        ),
     },
     zip_safe=True,
     install_requires=readlist('requirements.txt'),

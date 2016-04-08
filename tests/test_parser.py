@@ -2,7 +2,7 @@
 # coding: utf-8
 import os
 from nose.tools import *
-from jasco_parser.parser import JASCOParser
+from jasco_parser import JASCOParser
 
 
 filename = os.path.join(
